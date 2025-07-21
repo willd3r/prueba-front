@@ -1,0 +1,21 @@
+<div class="boxMain">
+
+    <div class="container">
+        <p class="d-flex text-center justify-content-center title">Transmisiones en Vivo</p>
+        <div class="select-cat">
+            <p class="subtitle">Selecciona una categoria de transmisiones para ver!</p>
+            <select class="btn btn btn-md" (change)="seleccionarCategoria($event)">
+              <option value="" disabled>-- Selecciona una categoría --</option>
+              <option *ngFor="let categoria of categorias" [value]="categoria">
+                {{ categoria | titlecase }}
+              </option>
+            </select>
+        </div>
+          
+          <!-- Componente de tarjetas -->
+        <app-card-live-dashboard [vivos]="vivos"></app-card-live-dashboard>
+          
+    </div>
+
+
+</div>

@@ -1,0 +1,10 @@
+<!-- Solo mostrar productos si NO es un conductor -->
+<div *ngIf="!workerData.vehicleInfo" class="container-fluid box-products mb-5">
+    <h2>Productos de {{ workerData.name }}</h2>
+    <div class="products-grid">
+        <!-- Aquí irían los productos del vendedor -->
+        <div class="product-card">
+            <p>No hay productos disponibles</p>
+        </div>
+    </div>
+</div>

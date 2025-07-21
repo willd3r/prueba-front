@@ -1,0 +1,24 @@
+.box-main{
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-width: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.section-box{
+    margin-left: 20px;
+}
+.rating{
+    display: flex;
+    justify-content: space-between;
+}
+hr{
+    color: black;
+}
+@media (max-width: 768px) {
+   hr{
+    width: 200px;
+   }
+
+}

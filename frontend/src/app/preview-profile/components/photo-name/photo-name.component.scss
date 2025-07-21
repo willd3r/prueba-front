@@ -1,0 +1,87 @@
+.rounded-circle {
+    height: 160px;
+    width: 160px;
+    color: #717477;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name-name {
+    margin-left: 40px;
+    margin-top: 10%;
+}
+
+.main-name {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.second-name {
+    margin-left: 10px;
+    font-size: 15px;
+    color: #717477;
+    font-weight: 900;
+}
+
+.ubication {
+    margin-left: 15%;
+    margin-top: -50px;
+}
+
+.place-ubication {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.boxMain {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .boxMain {
+        width: 100% !important;
+
+    }
+
+    .name-name {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 18%;
+        margin-top: 75%;
+    }
+    .second-name{
+        margin-left: 30px;
+    }
+
+    .ubication {
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+
+    .rounded-circle {
+        height: 160px;
+        width: 160px;
+        color: #717477;
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 30px;
+        margin-left: 20%;
+        position: absolute;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnnuevo1 {
+  background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+  color: white;
+}
+
+.boxInput {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.boxInput label {
+  color: #0D97D9;
+}
+
+label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.input-style {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  width: 100%;
+}
+
+.text-save {
+  font-family: 'Raleway', sans-serif;
+}
+
+.text {
+  width: 100%;
+  height: 160px;
+}
+
+.price-box {
+  margin-left: 70px;
+}
+
+.box-img {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.img {
+  background-color: rgb(249, 249, 249);
+  border-radius: 1px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: rgb(242, 242, 242);
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.img:hover {
+  border-color: #0D97D9;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-preview img {
+  object-fit: cover; /* Esto asegura que la imagen se ajuste sin deformarse */
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 13%;
+}
+
+.box-video {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-img, .title-video {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-total {
+  margin-left: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .img {
+    max-width: 100%;
+    height: 120px;
+  }
+
+  .price-box {
+    margin-left: 0;
+  }
+
+  .boxInput {
+    margin: 10px 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .text-save {
+    width: 100%;
+  }
+
+  .col-md-6, .col-md-5 {
+    width: 100%;
+  }
+
+  .col-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-img, .title-video {
+    font-size: 18px;
+  }
+
+  .img {
+    height: 120px;
+  }
+
+  .price-box {
+    margin-left: 0;
+  }
+
+  .btn-total {
+    width: 80%;
+  }
+}
+/* Estilo para la vista previa del video */
+.video-preview video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* Ajusta el video sin deformarlo */
+}

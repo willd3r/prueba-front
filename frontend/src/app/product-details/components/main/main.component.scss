@@ -1,0 +1,285 @@
+.BoxMain {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 160px;
+}
+
+.box-img-product {
+    margin-right: 70px;
+
+}
+
+.btn1{
+
+ background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+}
+
+.box-comision{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.image-product {
+    width: 600px;
+    height: 450px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.conditions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+//ESTILOS DE LOS DETALLES DEL PRODUCTO
+.prod-info {
+    margin-top: 35px;
+}
+
+.title-prod {
+
+    font-size: 35px;
+    color: #006BA6;
+}
+
+.price-main {
+    margin-top: 20%;
+    font-size: 35px;
+    color: black;
+}
+
+.box-btn {
+    margin-top: 10%;
+}
+
+.btn {
+    margin-right: 25px;
+    height: 55px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0496FF;
+}
+
+.btn-left {
+    background-color: #0496FF;
+}
+
+.box-seller {
+    margin-top: 7%;
+}
+
+.title-seller {
+    font-size: 25px;
+    color: #0496FF;
+}
+.details-sellers{
+    margin-top: 25px;
+}
+.image-seller {
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    width: 90px;
+    height: 90px;
+
+}
+.name{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.filter-color{
+    filter: invert(98%) sepia(94%) saturate(4898%) hue-rotate(319deg) brightness(107%) contrast(95%);
+}
+.stars{
+    margin-top: -10px;
+}
+.reputacion{
+    color: #0496FF;
+}
+
+//ESTILOS DE LA DESCRIPCION DEL PRODUCTO
+.boxDescription{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.title-desc{
+    color: #006BA6;
+    font-size: 30px;
+    text-decoration: solid;
+    text-decoration-color: #0496FF;
+    text-decoration-line: underline;
+    margin-bottom: 40px;
+}
+//ESTILOS PRODUCTOS SIMILARES
+.boxProdSimilares{
+    display: flex;
+    justify-content: center;
+}
+
+//ESTILOS DEL CARRUSEL DE PRODUCTOS
+body {
+    background-color: #6200EA;
+    color: #000;
+    overflow-x: hidden;
+}
+.prod{
+    background-color: rgb(245, 245, 245);
+}
+
+.card {
+   background-color: white;
+    margin: auto;
+    padding: 0px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.like {
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 100%;
+}
+
+.like-checked {
+    color: #E53935;
+}
+
+.like:hover {
+    color: #E53935;
+    cursor: pointer;
+}
+
+.pic1 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.product-pic {
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+}
+
+.card-1 {
+    padding: 30px 30px 20px 30px !important;
+    border: none;
+    width: 375px;
+}
+
+.category {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 25px;
+    color: grey;
+    font-size: 15px;
+}
+
+.product-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price {
+    font-family: 'Raleway', sans-serif;
+    padding-left: 0px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+.stars{
+
+   padding-left:0px;
+}
+
+.sm-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.fa-star {
+    color: #FF6F00;
+    cursor: pointer;
+}
+
+.fa-star-o {
+    color: #FF6F00;
+    cursor: pointer;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .BoxMain {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-img-product {
+        margin-right: 0;
+        text-align: center;
+    }
+    .image-product {
+        width: 90%;
+        height: auto;
+    }
+    .prod-info {
+        text-align: center;
+    }
+    .box-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conditions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-prod, .price-main {
+        font-size: 28px;
+    }
+    .box-seller {
+        text-align: center;
+    }
+    .details-sellers {
+        // flex-direction: column;
+        align-items: center;
+    }
+    .name {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .boxDescription {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-prod, .price-main {
+        font-size: 24px;
+    }
+    .box-btn {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+    .title-desc {
+        font-size: 24px;
+    }
+    .boxProdSimilares {
+        flex-direction: column;
+        align-items: center;
+    }
+}

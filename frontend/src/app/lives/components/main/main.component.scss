@@ -1,0 +1,367 @@
+/* Estilos adicionales */
+.streaming-container {
+    background-color: #000;
+    color: #fff;
+    min-height: 10vh;
+    padding-bottom: 10px;
+}
+
+.video {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9;
+    max-width: 100vw;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+
+.comments-section {
+    max-height: 190vh;
+    overflow-y: auto;
+    margin-top: 20px;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.box-comments {}
+
+.comment-box {
+    resize: none;
+}
+
+.box-new {
+    padding-top: 20px;
+}
+
+.title-coment {
+    font-size: 20px;
+}
+
+/* ESTILOS DEL PRODUCTO QUE SE ESTA VENDIENDO EN EL VIVO */
+.box-prod {
+    background-color: rgb(244, 244, 244);
+    margin-top: 0px !important;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-radius: 15px;
+    height: 150px;
+    width: 410px;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.prod-details {
+    display: flex;
+}
+
+.box-img {
+    background-color: black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 150px;
+    width: 130px;
+}
+
+.product-image {
+    height: 80px !important;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.info-comprar {
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.btn-accion {
+    margin-bottom: 20px;
+}
+
+.venta-title {
+    font-weight: bold;
+}
+
+.prod-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* ESTILOS DEL BANNER DE LA PERSONA QUE VENDE EL PRODUCTO */
+.box-profile {
+    color: #000;
+    width: 1510px;
+    margin-left: -310px;
+    margin-top: 20px;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0173ff;
+}
+
+.box-ellipse {
+    background-color: #ebedf0;
+    padding-right: 10px;
+    color: #000;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rounded-circle {
+    margin-top: -140px;
+    margin-left: 20px;
+}
+
+.box-pensil {
+    background-color: #0D97D9;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.info-profile {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.spn-name {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.buttons-conjunto {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.btn-comprar {
+    width: 150px;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: -10px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: -14px;
+    margin-left: 25px;
+}
+
+.descrip-vendedor {
+    margin-top: 20px;
+}
+
+.text-vendedor {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.shop {
+    font-size: 15px;
+}
+
+.btn-lv {
+    color: #0D97D9;
+}
+
+.embed-responsive {
+    color: #000;
+}
+
+.data {
+    color: #000;
+}
+
+/* ========================== */
+/* ESTILOS RESPONSIVE PARA MÓVILES */
+/* ========================== */
+
+/* Tablets y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .box-profile {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .box-prod {
+        width: 100%;
+        height: auto;
+    }
+
+    .prod-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .product-image {
+        height: 100px !important;
+        margin: 10px auto;
+    }
+}
+
+/* Móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+    .video {
+        height: 300px;
+        padding: 0;
+    }
+
+    .box-profile {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .info-profile {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .box-prod {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .prod-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-comprar {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+}
+
+/* Móviles medianos (hasta 480px) */
+@media (max-width: 480px) {
+    .video {
+        height: 250px;
+    }
+
+    .title-coment {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+
+    .comments-section {
+        max-height: 50vh;
+    }
+}
+
+/* Móviles pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .embed-responsive {
+        height: 200px;
+    }
+
+    .info-profile {
+        width: 100%;
+        margin-left: 0;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .box-profile {
+        width: 100%;
+        color: black;
+        background-color: white;
+    }
+
+    .descrip-vendedor,
+    .text-vendedor {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rounded-circle {
+        margin: 10px auto;
+        display: block;
+    }
+
+    .data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+}
+
+/* Mejoras para móviles grandes y medianos */
+@media (max-width: 600px) {
+    .video {
+        height: 200px !important;
+        aspect-ratio: 16/9;
+    }
+    .box-profile, .box-prod, .comments-section {
+        padding: 8px !important;
+        margin: 0 auto 12px auto !important;
+    }
+    .prod-details {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .box-img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important;
+    }
+    .product-image {
+        height: 80px !important;
+        margin: 10px auto !important;
+    }
+    .info-profile {
+        margin-left: 0 !important;
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+    .btn-comprar {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Extra: para pantallas muy pequeñas */
+@media (max-width: 370px) {
+    .video {
+        height: 140px !important;
+    }
+    .box-profile, .box-prod, .comments-section {
+        padding: 2px !important;
+    }
+}

@@ -1,0 +1,55 @@
+ul {
+    list-style-type: none;
+    margin-left: 37%;
+    padding: 0;
+}
+
+.btn1{
+
+ background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+}
+
+.rating {
+    margin-left: 37%;
+}
+
+.page {
+    background-color: #fdfffd;
+    padding: 4%;
+    margin: auto;
+}
+
+.card-img-top {
+    width: 90%;
+    height: 225px;
+}
+
+.view {
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin: px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 95%;
+    padding: 0px;
+    margin-left: 2%;
+    border-radius: 10px;
+}
+
+.card-footer {
+    background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+
+    font-weight: 700;
+}
+.card-title {
+    font-size: 17px;
+}
+
+.price {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+
+}

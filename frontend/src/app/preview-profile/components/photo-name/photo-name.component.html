@@ -1,0 +1,15 @@
+<div class="mb-5 boxMain">
+    <div class="d-flex">
+        <div class="rounded-circle">
+            <img *ngIf="workerData.image" [src]="workerData.image" alt="Foto de perfil" class="profile-image">
+            <mat-icon *ngIf="!workerData.image">person</mat-icon>
+        </div>
+        <div class="name-name d-flex">
+            <p class="main-name">{{ workerData.name }}</p>
+            <label for="" class="second-name">@{{ workerData.name }}</label>
+        </div>
+    </div>
+    <div class="ubication">
+        <p class="place-ubication"><mat-icon>location_on</mat-icon>{{ workerData.location }}</p> 
+    </div>
+</div>

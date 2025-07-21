@@ -1,0 +1,347 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
+
+.service-3 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
+.img-icon{
+    background-attachment: inherit;
+    width: 80px;
+    height: 80px;
+}
+.title-desc{
+    margin-left: 20px;
+}
+.desc{
+    color: black;
+    font-weight: 500;
+}
+.accordion{
+    width: 300px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.service-3 h1,
+.service-3 h2,
+.service-3 h3,
+.service-3 h4,
+.service-3 h5,
+.service-3 h6 {
+    color: #3e4555;
+}
+
+.service-3 .font-weight-medium {
+    font-weight: 500;
+}
+
+.service-3 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.service-3 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.service-3 .linking {
+    color: #3e4555;
+}
+
+.service-3 .linking:hover {
+    color: #316ce8;
+}
+
+.service-3 a {
+    text-decoration: none;
+}
+
+.service-3 .text-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+ 
+.service-3 .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.service-3 .wrap-service3-box .card-body {
+    padding: 40px;
+}
+
+.service-3 .btn-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-3 .btn-success-gradiant:hover {
+    background: #1dc8cc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #1dc8cc 0%, #2cdd9b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#1dc8cc), to(#2cdd9b));
+    background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);
+}
+
+.service-3 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+  .hover-effect {
+    transition: transform 0.3s ease-in-out;
+  }
+  .hover-effect:hover {
+    transform: scale(1.1);
+  }
+
+
+/* Estilos para la tarjeta y los elementos con hover */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-title {
+  transition: color 0.3s ease;
+}
+
+.vehicle-title:hover {
+  color: #039be5;
+  text-decoration: underline;
+}
+
+.mat-expansion-panel-header {
+  transition: background-color 0.3s ease;
+}
+
+.mat-expansion-panel-header:hover {
+  background-color: #f1f1f1;
+}
+
+.vehicle-panel .mat-expansion-panel-header {
+  cursor: pointer;
+}
+
+/* Estilo para los iconos */
+.img-icon {
+  transition: transform 0.3s ease;
+}
+
+.img-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Asegurar que la card tenga suficiente espacio entre los elementos */
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Añadir transición a los paneles expandibles */
+.mat-expansion-panel-body {
+  transition: background-color 0.3s ease;
+}
+
+.mat-expansion-panel-body:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el indicador de estado online/offline */
+.vehicle-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.vehicle-name {
+  font-weight: 600;
+  color: #3e4555;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-indicator.online .status-dot {
+  background-color: #4CAF50;
+  box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+}
+
+.status-indicator.offline .status-dot {
+  background-color: #f44336;
+  box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+}
+
+.status-indicator.online .status-text {
+  color: #4CAF50;
+}
+
+.status-indicator.offline .status-text {
+  color: #f44336;
+}
+
+/* Botón pequeño para ir al perfil */
+.btn-profile-small {
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  margin-left: 8px;
+}
+
+.btn-profile-small:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.btn-profile-small mat-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.btn-profile-small:hover mat-icon {
+  color: #006ba6;
+}
+
+/* Animación de pulso para el punto */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+/* Animación específica para offline */
+.status-indicator.offline .status-dot {
+  animation: pulse-offline 2s infinite;
+}
+
+@keyframes pulse-offline {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(244, 67, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+  }
+}
+
+/* Estilos para los detalles del vehículo */
+.vehicle-details {
+  padding: 15px 0;
+}
+
+.vehicle-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vehicle-info-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-info-list li:last-child {
+  border-bottom: none;
+}
+
+.vehicle-info-list li strong {
+  color: #3e4555;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.vehicle-info-list li span.online {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.vehicle-info-list li span.offline {
+  color: #f44336;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .vehicle-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .status-indicator {
+    align-self: flex-start;
+  }
+  
+  .btn-profile-small {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  
+  .vehicle-info-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .vehicle-info-list li strong {
+    min-width: auto;
+  }
+}

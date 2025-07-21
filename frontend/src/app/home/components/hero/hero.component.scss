@@ -1,0 +1,275 @@
+/*
+.boxHero {
+  background-color: rgba(0, 107, 166, 0.5) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}*/
+
+/* Prevenir scroll horizontal */
+:host {
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.boxHero {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.box1 {
+  width: 100%;
+  max-width: 700px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #236bd8;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-main {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.box-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Asegurar que el carrusel no cause scroll */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-out;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: grab;
+  width: 100%;
+  touch-action: pan-y pinch-zoom;
+
+  &:active {
+    cursor: grabbing;
+    transition: none;
+  }
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.img-main {
+  max-width: 150px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #236bd8;
+  transition: all 0.3s ease;
+  z-index: 2;
+
+  &:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &.prev-button {
+    left: 10px;
+  }
+
+  &.next-button {
+    right: 10px;
+  }
+}
+
+.desc {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 90%;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box2 {
+  width: 100%;
+  max-width: 290px;
+  aspect-ratio: 16/9;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.box2 iframe,
+.box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .box-box {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .box1 {
+    height: 200px;
+  }
+
+  .img-main {
+    max-width: 120px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .box-main {
+    margin-right: 0;
+    padding: 0 10px;
+  }
+
+  .boxes {
+    width: 100%;
+    align-items: center;
+  }
+
+  .box1 {
+    height: 180px;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+
+  .img-main {
+    max-width: 100px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .boxHero {
+    padding: 1rem 0;
+  }
+
+  .box1 {
+    height: 150px;
+    width: calc(100% - 16px);
+    margin: 0 8px;
+  }
+
+  .img-main {
+    max-width: 90px;
+    max-height: 35px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .box-main {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .box1 {
+    height: 120px;
+    width: calc(100% - 12px);
+    margin: 0 6px;
+  }
+
+  .img-main {
+    max-width: 80px;
+    max-height: 30px;
+  }
+
+  .carousel-button {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+  }
+}

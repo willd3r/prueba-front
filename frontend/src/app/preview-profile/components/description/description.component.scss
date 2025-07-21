@@ -1,0 +1,157 @@
+.box-desc {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    color: black;
+}
+
+.desc h2 {
+    color: #006ba6;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.desc p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contract {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+    border: none;
+    color: white;
+    
+    &:hover {
+        background: linear-gradient(90deg, #128C7E 0%, #25D366 100%);
+    }
+    
+    i {
+        font-size: 18px;
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #006ba6 0%, #04c2fc 100%);
+    border: none;
+    color: white;
+    
+    &:hover {
+        background: linear-gradient(90deg, #04c2fc 0%, #006ba6 100%);
+    }
+}
+
+.info-seller {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.info-seller .title {
+    color: #006ba6;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.info-seller ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-seller li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+    color: #666;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.vehicle-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #e8f5e8;
+    border-radius: 10px;
+    border-left: 4px solid #4CAF50;
+}
+
+.vehicle-info .title {
+    color: #2E7D32;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.vehicle-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vehicle-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #c8e6c9;
+    color: #2E7D32;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+    
+    strong {
+        color: #1B5E20;
+        font-weight: 600;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .box-desc {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .desc h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .info-seller,
+    .vehicle-info {
+        padding: 1rem;
+    }
+}

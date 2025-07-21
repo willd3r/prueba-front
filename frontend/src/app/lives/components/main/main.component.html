@@ -1,0 +1,406 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+
+        <!-- Sección de streaming en vivo -->
+        <div class="col-lg-8 streaming-container px-0">
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <div >
+
+                    <!-- <iframe class="video" id="intro_explanimation" title="SponsorMatch intro explanimation"
+                        src='arn:aws:medialive:sa-east-1:068165095438:channel:581868' frameborder='0' webkitAllowFullScreen
+                        mozallowfullscreen allowFullScreen>
+                    </iframe> -->
+
+                    <iframe
+  [src]="trustedStreamingUrl"
+  class="video"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+                </div>
+                <button (click)="startStreaming()">iniciar directo</button>
+            </div>
+            <div class="container-fluid box-profile">
+                <div class="height-100 row d-flex justify-content-center align-items-center">
+                    <div class="col-md-7">
+                        <div class="py-3 px-0 bg-white rounded">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="position-relative"> <img src="https://i.imgur.com/EnANUqj.jpg"
+                                            width="80" class="rounded-circle"> <span
+                                            class="position-absolute dots"></span> </div>
+                                    <div class="info-profile">
+                                        <h2 class="mb-0">Juana Rodriguez</h2> <span class="spn-name">rod_juli</span>
+                                        <div class="d-flex flex-row mt-2 data">
+                                            <span><strong>24</strong> Productos en venta</span>
+                                            <!--<span class="mx-5"><strong>120</strong> Seguidores</span>-->
+                                            <span class=""><strong>670</strong> Productos vendidos</span>
+
+                                        </div>
+                                        <div class="descrip-vendedor">
+                                            <p class="text-vendedor">Descripcion del vendedor</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo
+                                                delectus. Nesciunt exercitationem modi inventore quidem, quos eius eum
+                                                reprehenderit voluptatem cupiditate possimus dolorum tenetur molestiae
+                                                dolorem necessitatibus voluptas harum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                 <div class="mt-2">
+
+                                    <span (click)="addFriend()" class="box-pensil"><i class="fa fa-user-plus"></i></span>
+                                </div>
+                                -->
+
+                                <div></div>
+                            </div>
+                            <!--
+                            <div class="container-fluid boxHero px-0">
+
+                                <div class="wrapper my-5">
+                                    <div id="formContent" class="">
+                                        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" dynamicHeight>
+                                            <mat-tab>
+                                                <ng-template mat-tab-label>
+                                                    <mat-icon class="mx-2">assignment</mat-icon>
+                                                    Productos
+                                                </ng-template>
+
+                                            </mat-tab>
+                                            <mat-tab>
+                                                <ng-template mat-tab-label>
+                                                    <mat-icon class="mx-2"> notes</mat-icon>
+                                                    Clips y transmisiones pasadas
+                                                </ng-template>
+
+                                            </mat-tab>
+
+
+                                        </mat-tab-group>
+                                    </div>
+                                </div>
+
+
+                            </div>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--seccion del producto que se esta vendiendo-->
+
+        <!-- Sección de comentarios -->
+        <div class="col-lg-4  p-3 comments-section">
+            <div class="box-prod">
+
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="https://i.imgur.com/QpjAiHq.jpg">
+                        <p class="text-white px-2 mx-2 prod-title">Camisa cuadrille con botones</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button class="btn btn-primary btn-sm btn-accion">
+                                    <img src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-prod">
+                <div class="prod-details">
+                    <div class="col-md-3 box-img">
+                        <img class="img-fluid img-responsive rounded product-image"
+                            src="../../../../assets/img/product-3.png">
+                        <p class="text-white px-2 mx-2 prod-title">Saco gabardina mujer</p>
+                    </div>
+                    <div class="info-comprar">
+                        <div class="precio">
+                            precio: $35000
+                        </div>
+
+                        <!--<button class="btn btn-outline-primary btn-sm btn-accion">Comprar</button>-->
+                        <div class="buttons-conjunto">
+                            <a href="/chat" class="whatsapp-button"> <button
+                                    class="btn btn-primary btn-sm btn-accion btn-lv"> <img
+                                        src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="30"
+                                        alt=""></button></a>
+                            <a href="/dashboard" class="whatsapp-button mx-3"> <button
+                                    class="btn btn-outline-primary btn-sm btn-accion"><img
+                                        src="../../../../assets/img/logo.png" width="30" alt=""></button></a>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-md btn-accion btn-comprar" (click)="addBuy()"><i
+                                class="fas fa-shopping-bag"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-comments">
+                <p class="title-coment">Comentarios</p>
+                <div class="comment mt-3 p-2 bg-white rounded shadow-sm">
+                    <strong>Usuario 1:</strong>
+                    <p>¡Gran transmisión!</p>
+                </div>
+                <div class="comment mt-3 p-2 bg-white rounded shadow-sm">
+                    <strong>Usuario 2:</strong>
+                    <p>¡Me encanta el contenido!</p>
+                </div>
+                <div class="comment mt-3 p-2 bg-white rounded shadow-sm">
+                    <strong>Usuario 1:</strong>
+                    <p>¡Gran transmisión!</p>
+                </div>
+                <div class="comment mt-3 p-2 bg-white rounded shadow-sm">
+                    <strong>Usuario 2:</strong>
+                    <p>¡Me encanta el contenido!</p>
+                </div>
+            </div>
+
+            <!-- Caja de texto para nuevos comentarios -->
+
+        </div>
+
+    </div>

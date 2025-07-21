@@ -1,0 +1,13 @@
+.boxMain{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.btn{
+    border-radius: 25px;
+    background-color: rgb(240, 240, 240);
+}
+.btn:hover{
+    background-color: #356ca6;
+    color: white;
+}

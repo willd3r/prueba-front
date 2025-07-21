@@ -1,0 +1,150 @@
+
+.mainBox{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.welcome-msg p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.label{
+    font-weight: 700;
+    color: gray;
+}
+.active-orders{
+    border-width: 1px;
+    border-color: rgb(250, 250, 250);
+    border-style: solid;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: white;
+}
+.title p{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.strike-text{
+    font-size: 25px;
+    margin-top: 15px;
+    
+}
+.extra-info{
+    display: flex;
+    justify-content: space-between;
+}
+.txt{
+    font-weight: bold;
+}
+.banner{
+    background-color: white;
+    margin-right: 20px;
+}
+.icon-pencil{
+    color: rgb(162, 162, 162);
+    font-size: 16px;
+    margin-left: 8px;
+}
+.icon-add{
+    font-size: 18px;
+    margin-left: 2px;
+}
+.icon-pencil:hover{
+    color: #0D97D9;
+}
+.btn-add{
+    margin-left: 63px;
+    margin-bottom: 20px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    margin-left: -17px;
+}
+.icon{
+    margin-left: 5px;
+    color: rgb(171, 171, 171);
+}
+.compartir{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+.box-link-ref{
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom:120px;
+}
+.text-link{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.input-link{
+    height: 50px;
+}
+.span{
+    color: black;
+}
+.first-title{
+    color: black;
+}
+.icon-edit-location{
+    color: rgb(171, 171, 171);
+}
+.icon-edit-stock{
+    color: rgb(171, 171, 171);
+}
+.info-banner{
+    color: black;
+}
+.character-logo{
+    color: transparent;
+}
+@media (max-width: 768px) {
+    .mainBox{
+        margin-left: 10px;
+    }
+    .span{
+        margin-left: 15px;
+    }
+   .title{
+    font-size: 15px;
+   }
+   .strike-text{
+    margin-left: 30%;
+   }
+   .icon-edit-location{
+    margin-left: 40%;
+   }
+   .icon-edit-stock{
+    margin-left: 20%;
+   }
+   .info-banner{
+    margin-top: 120px;
+   }
+   .banner{
+    height: 100%;
+    padding-bottom: 50px;
+   }
+   .box-link-ref{
+    margin-left: -10px;
+   }
+   .banner{
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+   }
+   .character-logo{
+    border-top-left-radius: 10px;
+   }
+}
+//estilos del modal
+.mat-dialog-title{
+    margin-left: 50px;
+    height: 200px;
+    width: 200px;
+}
+

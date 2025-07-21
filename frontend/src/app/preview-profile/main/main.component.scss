@@ -1,0 +1,24 @@
+.container-fluid {
+
+}
+
+.content-wrapper {
+    
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        padding: 10px 0;
+    }
+
+    .content-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

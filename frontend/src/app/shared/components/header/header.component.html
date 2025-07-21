@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-style navbar-light" >
+    <div class="container-fluid">
+        <!--boton hamburguesa-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 elements">
+
+                <!-- LOGO - PRIMERO -->
+                <div class="boxImg" data-toggle="collapse">
+                    <a href="/home">
+                        <img class="img-responsive" src="../../../../assets/img/Likevendor-v2.png" alt="Logo LikeVendor">
+                    </a>
+                </div>
+
+                <!-- BARRA DE BUSQUEDA - Segundo -->
+                <div class="inputSearch my-4">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle btnSearch-all  pt-2" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{'mas'| translate}}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li aria-disabled="true"><a class="dropdown-item" href="#"><strong>Categorias</strong></a></li>
+                            <li><a class="dropdown-item" href="/envios-info">
+                                <mat-icon class="me-1">local_shipping</mat-icon> Envíos
+                            </a></li>
+                            <li><a class="dropdown-item">Ropa</a></li>
+                            <li><a class="dropdown-item">Electrodomesticos</a></li>
+                            <li><a class="dropdown-item">Articulos de casa</a></li>
+                            <li><a class="dropdown-item">Articulos de colegio</a></li>
+                            <li><a class="dropdown-item">Celulares</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="search-input-container">
+                        <input type="text" 
+                               placeholder="{{title | translate}}"
+                               (keyup)="onKeyUp($event)" />
+                        <ul class="search-suggestions" *ngIf="listFiltered && listFiltered.length > 0">
+                            <li class="suggestion-item" *ngFor="let item of listFiltered">
+                                <a>{{item}}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btnSearch"><mat-icon class="d-flex justify-content-center">search</mat-icon></button>
+                </div>
+
+                <!-- VIVO ES - Tercero -->
+                <div class="mobile-header-buttons d-block d-lg-none">
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Botón Live -->
+                        <a href="/dashboard-live" class="btn btn-live-mobile">
+                            <span class="live-text">{{ 'VIVO' | translate }}</span>
+                            <mat-icon class="live-icon-mobile parpadeo">fiber_manual_record</mat-icon>
+                        </a>
+                        
+                        <!-- Botón Traducir -->
+                        <div class="btn-language-mobile">
+                            <select class="btn btn-lang-mobile" (change)="onLanguageChange($event)">
+                                <option value="es">{{ 'Es' | translate }}</option>
+                                <option value="en">{{ 'En' | translate }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTONES AUTH - Cuarto -->
+                <div class="box-auth">
+                    <!-- Mostrar botones de login/register cuando NO está autenticado -->
+                    <div class="box-login" *ngIf="!isLoggedIn">
+                        <mat-icon class="icon">account_circle</mat-icon>
+                        <a href="/login" class="auth-link">
+                            <p class="text-auth">{{'Iniciar sesion'| translate}}</p>
+                        </a>
+                    </div>
+                    <div class="box-register" *ngIf="!isLoggedIn">
+                        <mat-icon class="icon-edit">edit</mat-icon>
+                        <a href="/register" class="auth-link">
+                            <p class="text-auth">{{'registro'| translate}}</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Mostrar botón de logout cuando SÍ está autenticado -->
+                    <div class="box-logout" *ngIf="isLoggedIn">
+                        <mat-icon class="icon">logout</mat-icon>
+                        <button (click)="logout()" class="auth-link logout-btn">
+                            <p class="text-auth">{{'Cerrar sesion'| translate}}</p>
+                        </button>
+                    </div>
+                </div>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<app-nav></app-nav>

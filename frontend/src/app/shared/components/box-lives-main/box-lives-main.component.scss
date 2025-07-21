@@ -1,0 +1,395 @@
+.boxes {
+    color: black;
+    margin-bottom: 120px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: solid;
+    border-color: #0D97D9;
+    border-width: 1px;
+    color: black;
+    position: relative;
+}
+
+/* Contador simple de espectadores */
+.viewers-simple {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ff4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+    animation: twitchPulse 2s infinite;
+}
+
+.viewers-simple mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 11px;
+}
+
+.viewers-simple span {
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación titilante estilo Twitch */
+@keyframes twitchPulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(255, 68, 68, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+    }
+}
+
+.buttons-links {
+    color: transparent;
+}
+
+.btn-down {
+    //solo para ponerle algun valor,asi tomo referencia de ese elemento
+    color: white;
+}
+
+.box-button {
+    margin-top: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.btn-lives {
+    padding-bottom: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-top: 38px;
+    padding-top: 0px;
+    margin-left: 0px;
+    width: 100px;
+    height: 72px;
+    background-color: #0D97D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon {
+   
+    margin-left: 38px;
+    font-size: 30px;
+}
+
+.live-title {
+    color: white;
+    font-size: 18px;
+    margin-left: -65px;
+    margin-top: -25px;
+}
+
+.live-icon {
+    margin-bottom: 2px;
+    font-size: 12px;
+    margin-left: -5px;
+    color: red;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.parpadeo {
+    animation: blink 1s infinite;
+}
+
+.logo-lv {
+    margin-left: -65px;
+}
+
+.btn-casa {
+  background: #0D97D9 !important;
+}
+
+.btn-casa mat-icon {
+  color: white !important;
+  margin: 0 auto;
+  font-size: 30px;
+  display: block;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media(max-width: 480px) {
+    .boxes {
+        margin-bottom: 60px;
+        margin-top: 60px;
+        padding: 0 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .box {
+        width: 280px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .box-button {
+        margin-top: -40px;
+        gap: 8px;
+        padding: 0 5px;
+        justify-content: center;
+    }
+
+    .btn-lives {
+        width: 90px;
+        height: 65px;
+        margin-top: 30px;
+    }
+
+    mat-icon {
+        font-size: 25px;
+        margin-left: 25px;
+    }
+
+    .live-title {
+        font-size: 16px;
+        margin-left: -55px;
+        margin-top: -20px;
+    }
+
+    .logo-lv {
+        margin-left: -55px;
+        width: 35px;
+    }
+
+    .viewers-simple {
+        top: 8px;
+        right: 8px;
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    .viewers-simple mat-icon {
+        font-size: 12px;
+        width: 12px;
+        height: 12px;
+        margin-left: 8px;
+    }
+}
+
+@media(max-width: 375px) {
+    .boxes {
+        margin-bottom: 50px;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
+    .box {
+        width: 260px;
+        height: 300px;
+    }
+
+    .box-button {
+        margin-top: -35px;
+        gap: 6px;
+        padding: 0 3px;
+        justify-content: center;
+    }
+
+    .btn-lives {
+        width: 85px;
+        height: 60px;
+        margin-top: 25px;
+    }
+
+    mat-icon {
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+    .live-title {
+        font-size: 14px;
+        margin-left: -50px;
+        margin-top: -18px;
+    }
+
+    .logo-lv {
+        margin-left: -50px;
+        width: 30px;
+    }
+}
+
+@media(max-width: 320px) {
+    .buttons-links {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+    }
+    
+    .boxes {
+        margin-bottom: 40px;
+        margin-top: 40px;
+        padding: 0 5px;
+    }
+
+    .box {
+        margin-left: 0;
+        margin-right: 0;
+        width: 250px;
+        height: 280px;
+    }
+
+    .box-button {
+        margin-top: -30px;
+        gap: 5px;
+        padding: 0 2px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-down {
+        margin-top: 20px;
+    }
+    
+    .btn-lives {
+        width: 80px;
+        height: 55px;
+        margin-top: 20px;
+    }
+
+    mat-icon {
+        font-size: 20px;
+        margin-left: 18px;
+    }
+
+    .live-title {
+        font-size: 13px;
+        margin-left: -45px;
+        margin-top: -15px;
+    }
+
+    .logo-lv {
+        margin-left: -45px;
+        width: 25px;
+    }
+
+    .container-fluid {
+        height: 1700px;
+    }
+    
+    .viewers-simple {
+        top: 6px;
+        right: 6px;
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+    
+    .viewers-simple mat-icon {
+        font-size: 10px;
+        width: 10px;
+        height: 10px;
+        margin-left: 6px;
+    }
+}
+
+/* Media Queries para tablets */
+@media(min-width: 481px) and (max-width: 768px) {
+    .boxes {
+        margin-bottom: 80px;
+        margin-top: 80px;
+        padding: 0 20px;
+    }
+
+    .box {
+        width: 290px;
+        height: 340px;
+    }
+
+    .box-button {
+        margin-top: -42px;
+        gap: 12px;
+        padding: 0 8px;
+        justify-content: center;
+    }
+
+    .btn-lives {
+        width: 95px;
+        height: 68px;
+        margin-top: 35px;
+    }
+
+    mat-icon {
+        font-size: 28px;
+        margin-left: 30px;
+    }
+
+    .live-title {
+        font-size: 17px;
+        margin-left: -60px;
+        margin-top: -22px;
+    }
+
+    .logo-lv {
+        margin-left: -60px;
+        width: 45px;
+    }
+}
+
+// .titleEmprender {
+//   color: #006ba6;
+//   font-size: 2.6rem;
+//   font-weight: 400;
+// }
+
+// .textEmprender {
+//   color: #00000073;
+//   text-align: right !important;
+// }

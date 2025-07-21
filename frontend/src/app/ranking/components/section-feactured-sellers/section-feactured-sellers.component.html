@@ -1,0 +1,56 @@
+<div class="container-fluid w-100 my-5">
+  <h2 class="titleSection text-center">{{ 'ranking.featured_sellers' | translate }}</h2>
+  <p class="textSection text-center">{{ 'ranking.featured_description' | translate }}</p>
+
+  <div class="d-flex justify-content-center buttons-links">
+    <button *ngFor="let cat of categories" class="btn my-2 mx-2" (click)="selectCategory(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div *ngIf="sellersAvailable.length > 0" class="row-sellers">
+    <div class="row row-cols-12">
+      <div class="card card-info col-2 shadow px-4 py-4 border-color" *ngFor="let seller of sellersAvailable">
+        <p class="name-surname">{{ seller.name }}</p>
+        <!-- <p class="cat-name">Categoría: <strong>{{ seller.category }}</strong></p> -->
+        <span class="desc">{{ 'ranking.description' | translate }}:</span>
+        <p>{{ seller.description }}</p>
+        <div class="d-flex justify-content-between">
+          <img src="https://picsum.photos/80" class="rounded-circle border-color-img" alt="Vendedor">
+          <div class="d-flex flex-column btn-profile">
+            <a href="/preview-profile">
+              <button class="btn mt-2 btn-primary btn-sm">{{ 'ranking.view_profile' | translate }}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ranking-section mt-5">
+    <h3 class="ranking-title text-center mb-4">Top Rankings</h3>
+    <div class="ranking-container">
+      <div class="ranking-card" *ngFor="let ranking of rankings; let i = index">
+        <div class="ranking-position">
+          <span class="position-number" [class.top-three]="i < 3">{{ i + 1 }}</span>
+        </div>
+        <div class="ranking-info">
+          <h4 class="ranking-name">{{ ranking.name }}</h4>
+          <div class="ranking-details">
+            <span class="ranking-score">
+              <i class="fas fa-star"></i>
+              {{ ranking.score }} puntos
+            </span>
+            <span class="ranking-category">{{ ranking.categorie }}</span>
+          </div>
+        </div>
+        <div class="ranking-badge" [class.top-three]="i < 3">
+          <i class="fas fa-trophy" *ngIf="i === 0"></i>
+          <i class="fas fa-medal" *ngIf="i === 1"></i>
+          <i class="fas fa-award" *ngIf="i === 2"></i>
+          <i class="fas fa-star" *ngIf="i >= 3"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

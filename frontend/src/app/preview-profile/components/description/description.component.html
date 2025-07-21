@@ -1,0 +1,43 @@
+<div class="container-fluid box-desc mb-5">
+    <div class="desc">
+        <h2>Sobre {{ workerData.name }}</h2>
+        <p class="desc">{{ workerData.description }}</p>
+    </div>
+
+    <div class="contract">
+        <!-- Botón de WhatsApp para conductores -->
+        <a *ngIf="workerData.whatsapp" [href]="'https://wa.me/' + workerData.whatsapp" target="_blank">
+            <button class="btn btn-success btn-md">
+                <i class="fab fa-whatsapp"></i>
+                Contactar por WhatsApp
+            </button>
+        </a>
+        
+        <!-- Botón de contratar genérico -->
+        <a *ngIf="!workerData.whatsapp" href="https://wa.me/5491145678901">
+            <button class="btn btn-primary btn-md">Contratar</button>
+        </a>
+        
+        <!-- Solo mostrar porcentajes de ganancias si NO es un conductor -->
+        <div *ngIf="!workerData.vehicleInfo" class="info-seller">
+            <p class="title">Porcentajes de ganancias</p>
+            <ul>
+                <li>Comision por venta del vendedor - 15%</li>
+                <li>Comision del vendedor- 10%</li>
+            </ul>
+        </div>
+        
+        <!-- Información del vehículo si es un conductor -->
+        <div *ngIf="workerData.vehicleInfo" class="vehicle-info">
+            <p class="title">Información del Vehículo</p>
+            <ul>
+                <li><strong>Modelo:</strong> {{ workerData.vehicleInfo.model }}</li>
+                <li><strong>Marca:</strong> {{ workerData.vehicleInfo.brand }}</li>
+                <li><strong>Placa:</strong> {{ workerData.vehicleInfo.licensePlate }}</li>
+                <li><strong>Color:</strong> {{ workerData.vehicleInfo.color }}</li>
+                <li><strong>Año:</strong> {{ workerData.vehicleInfo.year }}</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>

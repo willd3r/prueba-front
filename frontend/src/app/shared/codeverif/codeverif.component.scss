@@ -1,0 +1,154 @@
+@import '../../../styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+.boxHero {
+  height: 100%;
+  width: 100%;
+  background-image:linear-gradient(rgba(3,0,0,0.6),rgba(3,0,0,0.6)),url(../../../assets/img/background.png);
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  //background-image: url('../../../assets/img/background.png');
+}
+
+/*
+.boxHero {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 107, 166, 0.7) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background: linear-gradient(rgba(0, 107, 166, 0.75), rgba(0, 107, 166, 0.75));
+  //background-image: url('../../../../assets/img/hero-ranking.png');
+  background-image: url('../../../assets/img/background.png');
+}*/
+a {
+  color: #92badd;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 40px 8px 10px 8px;
+  color: #cccccc;
+}
+.input-style{
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  /*-webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);*/
+  text-align: center;
+}
+
+/* Estilos específicos para los inputs del código de verificación */
+.code-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.code-input {
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  border: 2px solid #ddd !important;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+  color: #333 !important;
+  font-family: 'Raleway', sans-serif !important;
+  transition: all 0.3s ease !important;
+  padding: 0 !important;
+  margin: 0 5px !important;
+}
+
+.code-input:focus {
+  border-color: #356ca6 !important;
+  box-shadow: 0 0 0 0.2rem rgba(53, 108, 166, 0.25) !important;
+  outline: none !important;
+}
+
+.code-input.filled {
+  border-color: #356ca6 !important;
+  background-color: #f8f9fa !important;
+}
+
+/* Asegurar que los caracteres se vean correctamente */
+.code-input::placeholder {
+  color: #ccc !important;
+  font-size: 16px !important;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 576px) {
+  .code-input {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+    margin: 0 3px !important;
+  }
+  
+  .code-input-container {
+    gap: 8px;
+  }
+}
+
+/*.container{
+    //display: grid;
+    //grid-template-columns: 35px 35px 35px;
+    //grid-gap: 20px;
+    //grid-column-gap: 10px;
+    //grid-template-rows: 15px;
+}*/
+.box{ 
+    border-radius: 4px;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 15px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
