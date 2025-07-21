@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
@@ -41,6 +41,6 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     DialogContentExampleDialog
   ],
   imports: [CommonModule, CarouselModule, IconsModule, HomeRoutingModule, SwiperModule,MatIconModule,SharedModule,MatTooltipModule,MatDialogModule,TranslateModule,NgbCarouselModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class HomeModule {}

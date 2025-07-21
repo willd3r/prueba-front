@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -27,6 +27,6 @@ import { TranslateModule } from '@ngx-translate/core';
     MatDialogModule,
     TranslateModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class ProductDetailsModule { }
