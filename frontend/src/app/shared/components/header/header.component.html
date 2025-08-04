@@ -18,27 +18,29 @@
 
                 <!-- BARRA DE BUSQUEDA - Segundo -->
                 <div class="inputSearch my-4">
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle btnSearch-all  pt-2" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="mas-dropdown-container">
+                        <button class="btn dropdown-toggle btnSearch-all pt-2" type="button" id="dropdownMenuButton1"
+                            (click)="toggleMasDropdown()">
                             {{'mas'| translate}}
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li aria-disabled="true"><a class="dropdown-item" href="#"><strong>Categorias</strong></a></li>
-                            <li><a class="dropdown-item" href="/envios-info">
+                        <div class="mas-dropdown-menu" [class.show]="isMasDropdownOpen">
+                            <div class="dropdown-header">
+                                <strong>Categorias</strong>
+                            </div>
+                            <a class="dropdown-item" href="/envios-info">
                                 <mat-icon class="me-1">local_shipping</mat-icon> Envíos
-                            </a></li>
-                            <li><a class="dropdown-item">Ropa</a></li>
-                            <li><a class="dropdown-item">Electrodomesticos</a></li>
-                            <li><a class="dropdown-item">Articulos de casa</a></li>
-                            <li><a class="dropdown-item">Articulos de colegio</a></li>
-                            <li><a class="dropdown-item">Celulares</a></li>
-                        </ul>
+                            </a>
+                            <a class="dropdown-item">Ropa</a>
+                            <a class="dropdown-item">Electrodomesticos</a>
+                            <a class="dropdown-item">Articulos de casa</a>
+                            <a class="dropdown-item">Articulos de colegio</a>
+                            <a class="dropdown-item">Celulares</a>
+                        </div>
                     </div>
 
                     <div class="search-input-container">
                         <input type="text" 
-                               placeholder="{{title | translate}}"
+                               placeholder="{{animatedTitle || (title | translate)}}"
                                (keyup)="onKeyUp($event)" />
                         <ul class="search-suggestions" *ngIf="listFiltered && listFiltered.length > 0">
                             <li class="suggestion-item" *ngFor="let item of listFiltered">

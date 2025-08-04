@@ -89,17 +89,29 @@ export class NavComponent implements OnInit {
   onItemInteraction(event: Event) {
     const element = event.target as HTMLElement;
     if (element.classList.contains('dropdown-item')) {
+      // Mantener todos los submenús ocultos - solo mostrar opciones principales
+      this.closeAllSubmenus();
+      
       this.renderer.addClass(element, 'visited');
       
-      // Cambiar color de texto
+      // Cambiar color de texto temporalmente
       this.renderer.setStyle(element, 'color', '#236bd8');
       
-      // Animar la barra lateral
-      const after = element.querySelector('::after');
-      if (after) {
-        this.renderer.setStyle(after, 'height', '100%');
-      }
+      // Restaurar color después de un momento
+      setTimeout(() => {
+        this.renderer.setStyle(element, 'color', '#333');
+      }, 200);
     }
+  }
+
+  // Método para cerrar otros submenús
+  private closeOtherSubmenus(currentElement: HTMLElement) {
+    const allSubmenus = document.querySelectorAll('.dropdown-submenu');
+    allSubmenus.forEach(submenu => {
+      if (submenu !== currentElement.nextElementSibling) {
+        this.renderer.setStyle(submenu, 'display', 'none');
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -108,6 +120,22 @@ export class NavComponent implements OnInit {
     dropdownItems.forEach(item => {
       this.renderer.listen(item, 'touchstart', (event) => this.onItemInteraction(event));
       this.renderer.listen(item, 'mouseenter', (event) => this.onItemInteraction(event));
+    });
+
+    // Cerrar submenús cuando se hace clic fuera del dropdown
+    this.renderer.listen('document', 'click', (event) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.dropdown-menu')) {
+        this.closeAllSubmenus();
+      }
+    });
+  }
+
+  // Método para cerrar todos los submenús
+  private closeAllSubmenus() {
+    const allSubmenus = document.querySelectorAll('.dropdown-submenu');
+    allSubmenus.forEach(submenu => {
+      this.renderer.setStyle(submenu, 'display', 'none');
     });
   }
 

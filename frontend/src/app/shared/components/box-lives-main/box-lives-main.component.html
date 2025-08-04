@@ -1,7 +1,7 @@
 <div class="boxes">
     <div class="box">
         
-        <iframe class="box" src="https://www.youtube.com/embed/cb12KmMMDJA?autoplay=1&mute=1"
+        <iframe class="video-frame" src="https://www.youtube.com/embed/cb12KmMMDJA?autoplay=1&mute=1"
             title="TN EN VIVO I SEGUÍ LA TRANSMISIÓN DE TODO NOTICIAS EN VIVO" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -12,27 +12,16 @@
             <mat-icon>visibility</mat-icon>
             <span>{{ currentViewers }}</span>
         </div>
-        
-        <div class="d-flex box-button">
-            <div *ngFor="let item of buttonsAction; let i = index">
-                <button class="btn btn-primary btn-lives" [ngClass]="{'btn-casa': i === 0}">
-                    <a href="/live">
-                        <mat-icon>{{item.icon}}<p class="live-title" *ngIf="item.title && item.iconLive">
-                            {{item.title}}<mat-icon class="live-icon parpadeo">{{item.iconLive}}</mat-icon></p>
-                        </mat-icon>
-                    </a>
-                    <a href="/preview-profile">
-                        <img *ngIf="item.id === 3" class="logo-lv" src="../../../../assets/img/logo_blanco.png" width="50"
-                        alt="">
-                    </a>
-                   
-                    <a href="https://wa.me/5491112345678">
-                        <img *ngIf="item.id === 2" class="logo-lv"
-                        src="../../../../assets/img/logo-atencion-cliente-blanco.png" width="40" alt="">
-                    </a>
-                    
-                </button>
-            </div>
+    </div>
+    
+    <!-- Botones debajo del video -->
+    <div class="d-flex box-button">
+        <div *ngFor="let item of buttonsAction; let i = index">
+            <button class="btn btn-primary btn-lives" [ngClass]="{'btn-casa': i === 0}">
+                <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+                <img *ngIf="item.id === 3" class="logo-lv" src="../../../../assets/img/logo_blanco.png" alt="">
+                <img *ngIf="item.id === 2" class="logo-lv" src="../../../../assets/img/logo-atencion-cliente-blanco.png" alt="">
+            </button>
         </div>
     </div>
 </div>

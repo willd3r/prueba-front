@@ -3,21 +3,29 @@
     margin-bottom: 120px;
     margin-top: 120px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 .box {
     width: 300px;
     height: 350px;
     border-radius: 15px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     border-style: solid;
     border-color: #0D97D9;
     border-width: 1px;
     color: black;
     position: relative;
+    overflow: hidden;
+}
+
+.video-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
 }
 
 /* Contador simple de espectadores */
@@ -83,75 +91,52 @@
 }
 
 .btn-down {
-    //solo para ponerle algun valor,asi tomo referencia de ese elemento
     color: white;
 }
 
 .box-button {
-    margin-top: -45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
-    padding: 0 10px;
+    padding: 5px 15px;
+    background: transparent;
+    margin-top: 0;
 }
 
 .btn-lives {
-    padding-bottom: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    margin-top: 38px;
-    padding-top: 0px;
-    margin-left: 0px;
-    width: 100px;
-    height: 72px;
+    width: 80px;
+    height: 60px;
     background-color: #0D97D9;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.btn-lives:hover {
+    background-color: #0b7bb8;
+    transform: translateY(-2px);
+}
+
+.btn-lives mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-mat-icon {
-   
-    margin-left: 38px;
-    font-size: 30px;
-}
-
-.live-title {
-    color: white;
-    font-size: 18px;
-    margin-left: -65px;
-    margin-top: -25px;
-}
-
-.live-icon {
-    margin-bottom: 2px;
-    font-size: 12px;
-    margin-left: -5px;
-    color: red;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.parpadeo {
-    animation: blink 1s infinite;
-}
-
 .logo-lv {
-    margin-left: -65px;
+    width: 28px;
+    height: 28px;
+    display: block;
 }
 
 .btn-casa {
@@ -160,9 +145,9 @@ mat-icon {
 
 .btn-casa mat-icon {
   color: white !important;
-  margin: 0 auto;
-  font-size: 30px;
-  display: block;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Media Queries para pantallas pequeñas */
@@ -173,6 +158,7 @@ mat-icon {
         padding: 0 15px;
         width: 100%;
         justify-content: center;
+        gap: 3px;
     }
 
     .box {
@@ -182,32 +168,24 @@ mat-icon {
     }
 
     .box-button {
-        margin-top: -40px;
-        gap: 8px;
-        padding: 0 5px;
-        justify-content: center;
+        gap: 10px;
+        padding: 3px 12px;
     }
 
     .btn-lives {
-        width: 90px;
-        height: 65px;
-        margin-top: 30px;
+        width: 70px;
+        height: 50px;
     }
 
-    mat-icon {
-        font-size: 25px;
-        margin-left: 25px;
-    }
-
-    .live-title {
-        font-size: 16px;
-        margin-left: -55px;
-        margin-top: -20px;
+    .btn-lives mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
     }
 
     .logo-lv {
-        margin-left: -55px;
-        width: 35px;
+        width: 24px;
+        height: 24px;
     }
 
     .viewers-simple {
@@ -230,6 +208,7 @@ mat-icon {
         margin-bottom: 50px;
         margin-top: 50px;
         padding: 0 10px;
+        gap: 2px;
     }
 
     .box {
@@ -238,32 +217,24 @@ mat-icon {
     }
 
     .box-button {
-        margin-top: -35px;
-        gap: 6px;
-        padding: 0 3px;
-        justify-content: center;
+        gap: 8px;
+        padding: 2px 10px;
     }
 
     .btn-lives {
-        width: 85px;
-        height: 60px;
-        margin-top: 25px;
+        width: 65px;
+        height: 45px;
     }
 
-    mat-icon {
-        font-size: 22px;
-        margin-left: 20px;
-    }
-
-    .live-title {
-        font-size: 14px;
-        margin-left: -50px;
-        margin-top: -18px;
+    .btn-lives mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
     }
 
     .logo-lv {
-        margin-left: -50px;
-        width: 30px;
+        width: 22px;
+        height: 22px;
     }
 }
 
@@ -278,6 +249,7 @@ mat-icon {
         margin-bottom: 40px;
         margin-top: 40px;
         padding: 0 5px;
+        gap: 1px;
     }
 
     .box {
@@ -288,10 +260,8 @@ mat-icon {
     }
 
     .box-button {
-        margin-top: -30px;
-        gap: 5px;
-        padding: 0 2px;
-        justify-content: center;
+        gap: 6px;
+        padding: 1px 8px;
         flex-wrap: wrap;
     }
 
@@ -300,25 +270,19 @@ mat-icon {
     }
     
     .btn-lives {
-        width: 80px;
-        height: 55px;
-        margin-top: 20px;
+        width: 60px;
+        height: 40px;
     }
 
-    mat-icon {
-        font-size: 20px;
-        margin-left: 18px;
-    }
-
-    .live-title {
-        font-size: 13px;
-        margin-left: -45px;
-        margin-top: -15px;
+    .btn-lives mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
     }
 
     .logo-lv {
-        margin-left: -45px;
-        width: 25px;
+        width: 20px;
+        height: 20px;
     }
 
     .container-fluid {
@@ -346,6 +310,7 @@ mat-icon {
         margin-bottom: 80px;
         margin-top: 80px;
         padding: 0 20px;
+        gap: 6px;
     }
 
     .box {
@@ -354,32 +319,178 @@ mat-icon {
     }
 
     .box-button {
-        margin-top: -42px;
-        gap: 12px;
-        padding: 0 8px;
-        justify-content: center;
+        gap: 15px;
+        padding: 6px 18px;
+    }
+
+    .btn-lives {
+        width: 85px;
+        height: 65px;
+    }
+
+    .btn-lives mat-icon {
+        font-size: 26px;
+        width: 26px;
+        height: 26px;
+    }
+
+    .logo-lv {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Media Queries para pantallas medianas */
+@media(min-width: 769px) and (max-width: 1024px) {
+    .boxes {
+        gap: 8px;
+    }
+
+    .box {
+        width: 320px;
+        height: 370px;
+    }
+
+    .btn-lives {
+        width: 90px;
+        height: 70px;
+    }
+
+    .btn-lives mat-icon {
+        font-size: 28px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-lv {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Netbook específico (1024 x 600) - ULTRA COMPACTO */
+@media (width: 1024px) and (height: 600px) {
+    .boxes {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        gap: 1px;
+    }
+
+    .box {
+        width: 220px;
+        height: 240px;
+    }
+
+    .box-button {
+        gap: 5px;
+        padding: 1px 8px;
+    }
+
+    .btn-lives {
+        width: 50px;
+        height: 35px;
+    }
+
+    .btn-lives mat-icon {
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .logo-lv {
+        width: 16px;
+        height: 16px;
+    }
+
+    .viewers-simple {
+        top: 4px;
+        right: 4px;
+        font-size: 8px;
+        padding: 1px 3px;
+    }
+    
+    .viewers-simple mat-icon {
+        font-size: 8px;
+        width: 8px;
+        height: 8px;
+        margin-left: 4px;
+    }
+}
+
+/* Netbook y pantallas similares (1024px de ancho) - ULTRA COMPACTO */
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .boxes {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        gap: 2px;
+    }
+
+    .box {
+        width: 230px;
+        height: 260px;
+    }
+
+    .box-button {
+        gap: 6px;
+        padding: 2px 10px;
+    }
+
+    .btn-lives {
+        width: 55px;
+        height: 40px;
+    }
+
+    .btn-lives mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .logo-lv {
+        width: 18px;
+        height: 18px;
+    }
+
+    .viewers-simple {
+        top: 6px;
+        right: 6px;
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+    
+    .viewers-simple mat-icon {
+        font-size: 9px;
+        width: 9px;
+        height: 9px;
+        margin-left: 5px;
+    }
+}
+
+/* Pantallas grandes (1200px en adelante) */
+@media(min-width: 1025px) {
+    .boxes {
+        gap: 10px;
+    }
+
+    .box {
+        width: 350px;
+        height: 400px;
     }
 
     .btn-lives {
         width: 95px;
-        height: 68px;
-        margin-top: 35px;
+        height: 75px;
     }
 
-    mat-icon {
-        font-size: 28px;
-        margin-left: 30px;
-    }
-
-    .live-title {
-        font-size: 17px;
-        margin-left: -60px;
-        margin-top: -22px;
+    .btn-lives mat-icon {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
     }
 
     .logo-lv {
-        margin-left: -60px;
-        width: 45px;
+        width: 34px;
+        height: 34px;
     }
 }
 

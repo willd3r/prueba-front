@@ -126,6 +126,306 @@ small{
     color: #1565c0;
 }
 
+/* 1024x768 específico - OPTIMIZADO */
+@media (width: 1024px) and (height: 768px) {
+  .boxHero {
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .boxMain {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-md-6 {
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .title-pay {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+
+  .resumen-info {
+    font-size: 16px;
+  }
+
+  .impuestos {
+    font-size: 14px;
+  }
+
+  .btn-pay {
+    margin-left: 25%;
+    width: 50%;
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .form-control {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .input i {
+    top: 14px;
+    left: 10px;
+    font-size: 14px;
+  }
+
+  .input input {
+    text-indent: 22px;
+  }
+
+  .card-text {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .certificate-text {
+    font-size: 11px;
+  }
+
+  .billing {
+    font-size: 13px;
+  }
+
+  .super-price {
+    font-size: 18px;
+  }
+
+  .super-month {
+    font-size: 10px;
+  }
+
+  .payment-card-body {
+    padding: 16px 0.75rem !important;
+  }
+
+  /* Tarjetas de crédito - MEJORADAS */
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 6px;
+  }
+
+  .icons img {
+    width: 35px !important;
+    height: auto !important;
+    max-width: 45px !important;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    padding: 2px;
+  }
+
+  .credit-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .credit-row .title-pay {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .credit-row .icons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+
+  /* Otros métodos de pago */
+  .mat-expansion-panel-header {
+    padding: 12px 16px;
+  }
+
+  .mat-expansion-panel-header-title {
+    font-size: 14px;
+  }
+
+  .card img, .card svg {
+    width: 28px !important;
+    height: auto !important;
+    max-width: 35px !important;
+  }
+}
+
+/* 1024px de ancho general - OPTIMIZADO */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .boxHero {
+    background-size: cover;
+    padding: 25px;
+  }
+
+  .boxMain {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-md-6 {
+    padding: 12px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .title-pay {
+    font-size: 17px;
+    margin-right: 8px;
+  }
+
+  .resumen-info {
+    font-size: 17px;
+  }
+
+  .impuestos {
+    font-size: 15px;
+  }
+
+  .btn-pay {
+    margin-left: 28%;
+    width: 44%;
+    font-size: 15px;
+    height: 48px;
+  }
+
+  .form-control {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .input i {
+    top: 15px;
+    left: 12px;
+    font-size: 15px;
+  }
+
+  .input input {
+    text-indent: 24px;
+  }
+
+  .card-text {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .certificate-text {
+    font-size: 12px;
+  }
+
+  .billing {
+    font-size: 14px;
+  }
+
+  .super-price {
+    font-size: 20px;
+  }
+
+  .super-month {
+    font-size: 11px;
+  }
+
+  .payment-card-body {
+    padding: 20px 1rem !important;
+  }
+
+  /* Tarjetas de crédito - MEJORADAS */
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+
+  .icons img {
+    width: 40px !important;
+    height: auto !important;
+    max-width: 50px !important;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    border: 1px solid #e0e0e0;
+    padding: 3px;
+  }
+
+  .credit-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .credit-row .title-pay {
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .credit-row .icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+
+  /* Otros métodos de pago */
+  .mat-expansion-panel-header {
+    padding: 14px 18px;
+  }
+
+  .mat-expansion-panel-header-title {
+    font-size: 15px;
+  }
+
+  .card img, .card svg {
+    width: 32px !important;
+    height: auto !important;
+    max-width: 40px !important;
+  }
+}
+
 @media (max-width: 1200px) {
     .boxMain {
         margin-top: 40px;

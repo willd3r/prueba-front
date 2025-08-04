@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   switchTheme = new FormControl(false)
   isLoggedIn: boolean = false;
   private authSubscription: Subscription = new Subscription();
+  isMasDropdownOpen: boolean = false;
 
   /*@ViewChild(HeaderLoginComponent) modal!: HeaderLoginComponent;
   private modalComponent!: HeaderLoginComponent;
@@ -33,7 +34,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.modal.openModal();
   }*/
 
-  title = 'Buscar tus...';
+  title = 'Buscar tus productos...';
+  animatedTitle = '';
   searchTerm$ = new Subject<string>();
 
   onKeyUp(event: KeyboardEvent): void {
@@ -154,6 +156,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
     
     // Verificar estado inicial
     this.isLoggedIn = this.authService.isLoggedIn();
+    
+    // Configurar el cierre del dropdown al hacer clic fuera
+    this.setupDropdownClose();
+    
+    // Iniciar animación de escritura
+    this.startTypingAnimation();
+  }
+
+  private startTypingAnimation(): void {
+    let index = 0;
+    const fullText = this.title;
+    
+    const typeWriter = () => {
+      if (index < fullText.length) {
+        this.animatedTitle += fullText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // Velocidad de escritura
+      } else {
+        // Reiniciar la animación después de 3 segundos
+        setTimeout(() => {
+          this.animatedTitle = '';
+          index = 0;
+          this.startTypingAnimation();
+        }, 3000);
+      }
+    };
+    
+    typeWriter();
   }
 
   ngOnDestroy(): void {
@@ -207,5 +237,24 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.toggleTheme();
   }
 
+  // Método para abrir/cerrar el dropdown "más"
+  toggleMasDropdown(): void {
+    this.isMasDropdownOpen = !this.isMasDropdownOpen;
+  }
+
+  // Configurar el cierre del dropdown al hacer clic fuera
+  private setupDropdownClose(): void {
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const dropdownButton = document.getElementById('dropdownMenuButton1');
+      const dropdownMenu = document.querySelector('.mas-dropdown-menu');
+      const dropdownContainer = document.querySelector('.mas-dropdown-container');
+      
+      // Si el clic no es en el contenedor del dropdown, cerrar el dropdown
+      if (dropdownContainer && !dropdownContainer.contains(target)) {
+        this.isMasDropdownOpen = false;
+      }
+    });
+  }
 
 }

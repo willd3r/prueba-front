@@ -4,10 +4,9 @@
 .boxHero {
   height: 100%;
   width: 100%;
-  background-image:linear-gradient(rgba(3,0,0,0.6),rgba(3,0,0,0.6)),url(../../../assets/img/background.png);
+  background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
-  //background-image: url('../../../assets/img/background.png');
 }
 
 /*

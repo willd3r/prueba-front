@@ -8,18 +8,10 @@
 
             <div class="embed-responsive embed-responsive-16by9">
                 <div >
-
-                    <!-- <iframe class="video" id="intro_explanimation" title="SponsorMatch intro explanimation"
-                        src='arn:aws:medialive:sa-east-1:068165095438:channel:581868' frameborder='0' webkitAllowFullScreen
-                        mozallowfullscreen allowFullScreen>
-                    </iframe> -->
-
-                    <iframe
-  [src]="trustedStreamingUrl"
-  class="video"
-  frameborder="0"
-  allowfullscreen>
-</iframe>
+  <div>
+          <!-- Reemplazamos el iframe por un div con referencia para el reproductor -->
+          <video #videoPlayer controls autoplay width="100%" height="auto" class="video"></video>
+        </div>
 
                 </div>
                 <button (click)="startStreaming()">iniciar directo</button>

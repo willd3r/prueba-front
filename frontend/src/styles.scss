@@ -64,4 +64,43 @@ iframe[src*="landbot"] {
     z-index: 2147483647 !important;
     pointer-events: auto !important;
   }
+}
+
+/* Solución para el problema del input de búsqueda en pantallas grandes */
+@media (min-width: 1200px) {
+  .inputSearch input::placeholder {
+    color: #333 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .inputSearch input {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+}
+
+/* Solución adicional para pantallas muy grandes */
+@media (min-width: 1400px) {
+  .inputSearch input::placeholder {
+    color: #333 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .inputSearch input {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+}
+
+/* Estilos globales para todos los placeholders */
+input::placeholder {
+  color: #333 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
 } 

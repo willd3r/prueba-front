@@ -596,3 +596,223 @@ h2.active {
   color: white;
 
 }
+
+/* Netbook específico (1024 x 600) - OPTIMIZADO */
+@media (width: 1024px) and (height: 600px) {
+  .boxHero {
+    height: 100vh;
+    width: 100%;
+    background-color: #4285f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .title-main {
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .title-1, .title-2 {
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .img-logo {
+    width: 100px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .linea-divisora {
+    background-color: white;
+    color: white;
+    height: 400px;
+    width: 3px;
+    margin: 0 20px;
+    flex-shrink: 0;
+  }
+
+  .modal-dialog {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    max-width: 350px;
+    flex-shrink: 0;
+  }
+
+  .modal-content {
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .input-style {
+    border-radius: 12px;
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .btnnuevo1 {
+    background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+    color: white;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #356CA6;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .text-center a {
+    color: #356CA6;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Netbook y pantallas similares (1024px de ancho) - OPTIMIZADO */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .boxHero {
+    height: 100vh;
+    width: 100%;
+    background-color: #4285f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 35px;
+  }
+
+  .title-main {
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 25px;
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+    max-width: 48%;
+  }
+
+  .title-1, .title-2 {
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .img-logo {
+    width: 120px;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .linea-divisora {
+    background-color: white;
+    color: white;
+    height: 450px;
+    width: 3px;
+    margin: 0 25px;
+    flex-shrink: 0;
+  }
+
+  .modal-dialog {
+    border-radius: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    max-width: 380px;
+    flex-shrink: 0;
+  }
+
+  .modal-content {
+    border-radius: 18px;
+    padding: 25px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .input-style {
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .btnnuevo1 {
+    background: linear-gradient(90deg, #236bd8 10%, #04c2fc 50%, #6779d9 90%);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #356CA6;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .text-center a {
+    color: #356CA6;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+}

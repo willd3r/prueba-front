@@ -23,6 +23,18 @@ input {
   border-color: #236bd8;
 }
 
+/* Estilos globales para el placeholder en todos los inputs */
+input::placeholder {
+  color: #333 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Animación de escritura para el input de búsqueda */
+.search-input-container {
+  position: relative;
+}
+
 /* Layout principal del header */
 .container-fluid {
   display: flex;
@@ -37,9 +49,9 @@ input {
   margin-top: 0;
   width: 200px;
   padding: 0 !important;
-  position: absolute;
-  left: 50px;
-  top: 20px;
+  position: relative;
+  left: auto;
+  top: auto;
   z-index: 10;
 
   img {
@@ -58,13 +70,13 @@ input {
   border-width: 1px;
   border-radius: 20px;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   height: 42px;
   width: 600px;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  left: auto;
+  transform: none;
 
   input {
     flex-grow: 2;
@@ -73,8 +85,22 @@ input {
     border-radius: 15px;
     border-width: 1px;
     border-color: #236bd8;
-    padding-left: 10px;
+    padding: 10px 15px;
     min-width: 400px;
+    color: #000 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    vertical-align: middle !important;
+
+    &::placeholder {
+      color: #333 !important;
+      opacity: 1 !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      line-height: 1.2 !important;
+      vertical-align: middle !important;
+    }
 
     &:focus {
       outline: none;
@@ -122,9 +148,9 @@ nav {
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
-  position: absolute;
-  right: 50px;
-  top: 20px;
+  position: relative;
+  right: auto;
+  top: auto;
   z-index: 10;
   margin: 0;
   padding: 0;
@@ -226,6 +252,102 @@ nav {
     }
   }
 }
+
+/* DROPDOWN "MAS" - POSICIONADO DENTRO DEL HEADER */
+.mas-dropdown-container {
+  position: relative;
+  display: inline-block;
+  z-index: 9999999999;
+}
+
+.mas-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 0;
+  margin: 5px 0 0 0;
+  min-width: 180px;
+  z-index: 9999999999;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  isolation: isolate;
+  
+  &.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-header {
+    padding: 10px 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 600;
+    color: #333;
+    border-radius: 6px 6px 0 0;
+    font-size: 13px;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px 16px;
+    color: #333 !important;
+    text-decoration: none;
+    border: none;
+    background: transparent !important;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background: #f0f8ff !important;
+      color: #236bd8 !important;
+      text-decoration: none;
+    }
+    
+    &:active, &:focus {
+      background: #e6f3ff !important;
+      color: #236bd8 !important;
+      outline: none;
+    }
+    
+    mat-icon {
+      margin-right: 8px;
+      vertical-align: middle;
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  /* Forzar estado normal cuando no hay hover */
+  .mas-dropdown-menu .dropdown-item:not(:hover):not(:active):not(:focus) {
+    background: transparent !important;
+    color: #333 !important;
+  }
+
+  /* Reset específico para elementos que se quedan pintados */
+  .mas-dropdown-menu .dropdown-item {
+    background: transparent !important;
+    color: #333 !important;
+  }
+
+  .mas-dropdown-menu .dropdown-item:hover {
+    background: #f0f8ff !important;
+    color: #236bd8 !important;
+  }
+}
+
+
 
 // Media Queries
 @media (max-width: 1366px) {
@@ -393,6 +515,428 @@ nav {
     font-size: 16px;
     margin-top: 8px;
   }
+
+  // Solución específica para el input de búsqueda en pantallas grandes
+  .inputSearch {
+    input {
+      color: #000 !important;
+      font-weight: 600 !important;
+      
+      &::placeholder {
+        color: #333 !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      &:focus::placeholder {
+        color: #666 !important;
+        opacity: 0.7 !important;
+      }
+    }
+    
+    .search-input-container {
+      position: relative;
+      
+      input {
+        color: #000 !important;
+        font-weight: 600 !important;
+        
+        &::placeholder {
+          color: #333 !important;
+          font-size: 16px !important;
+          font-weight: 600 !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+
+        &:focus::placeholder {
+          color: #666 !important;
+          opacity: 0.7 !important;
+        }
+      }
+    }
+  }
+}
+
+/* Netbook específico (1024 x 600) - OPTIMIZADO */
+@media (width: 1024px) and (height: 600px) {
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 80px;
+    padding: 10px 30px;
+  }
+
+  .elements {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .boxImg {
+    margin-top: 0;
+    width: 140px;
+    padding: 0 !important;
+    position: relative;
+    left: auto;
+    top: auto;
+    z-index: 10;
+
+    img {
+      width: 140px;
+      margin-left: 0;
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+
+  .inputSearch {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #236bd8;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    height: 35px;
+    width: 450px;
+    align-items: center;
+    position: relative;
+    left: auto;
+    transform: none;
+    box-shadow: 0 2px 4px rgba(35, 107, 216, 0.2);
+
+    .search-input-container {
+      flex-grow: 2;
+      position: relative;
+      height: 33px;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 100%;
+        height: 33px;
+        border: none;
+        border-radius: 25px;
+        padding: 8px 45px 8px 15px;
+        min-width: 280px;
+        font-size: 16px !important;
+        background-color: white !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        line-height: 1.2 !important;
+        vertical-align: middle !important;
+
+        &::placeholder {
+          color: #333 !important;
+          font-size: 16px !important;
+          font-weight: 600 !important;
+          opacity: 1 !important;
+          line-height: 1.2 !important;
+          vertical-align: middle !important;
+        }
+
+        &:focus {
+          outline: none !important;
+          background-color: white !important;
+          color: #000 !important;
+          box-shadow: none !important;
+        }
+
+        &:hover {
+          background-color: white !important;
+          color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .btnSearch-all {
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35,107,216);
+    color: white;
+    border-radius: 23px 0 0 23px;
+    font-size: 11px;
+    border: none;
+    height: 33px;
+  }
+
+  .btnSearch {
+    padding: 6px;
+    display: flex;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35,107,216);
+    color: white;
+    border-radius: 0 23px 23px 0;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 33px;
+  }
+
+  .box-auth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .box-login,
+  .box-register,
+  .box-logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-width: 60px;
+    height: 50px;
+    padding: 3px;
+    margin: 0;
+  }
+
+  .icon,
+  .icon-edit {
+    font-size: 28px;
+    color: #236bd8;
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .text-auth {
+    color: gray !important;
+    font-size: 11px;
+    margin: 3px 0 0 0;
+    padding: 0;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}
+
+/* Netbook y pantallas similares (1024px de ancho) - OPTIMIZADO */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 85px;
+    padding: 12px 35px;
+  }
+
+  .elements {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .boxImg {
+    margin-top: 0;
+    width: 150px;
+    padding: 0 !important;
+    position: relative;
+    left: auto;
+    top: auto;
+    z-index: 10;
+
+    img {
+      width: 150px;
+      margin-left: 0;
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+
+  .inputSearch {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #236bd8;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    height: 38px;
+    width: 480px;
+    align-items: center;
+    position: relative;
+    left: auto;
+    transform: none;
+    box-shadow: 0 2px 4px rgba(35, 107, 216, 0.2);
+
+    .search-input-container {
+      flex-grow: 2;
+      position: relative;
+      height: 36px;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 100%;
+        height: 36px;
+        border: none;
+        border-radius: 25px;
+        padding-left: 15px;
+        padding-right: 45px;
+        min-width: 300px;
+        font-size: 17px !important;
+        background-color: white !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+        outline: none !important;
+        box-shadow: none !important;
+
+        &::placeholder {
+          color: #333 !important;
+          font-size: 17px !important;
+          font-weight: 600 !important;
+          opacity: 1 !important;
+        }
+
+        &:focus {
+          outline: none !important;
+          background-color: white !important;
+          color: #000 !important;
+          box-shadow: none !important;
+        }
+
+        &:hover {
+          background-color: white !important;
+          color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .btnSearch-all {
+    padding: 7px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35,107,216);
+    color: white;
+    border-radius: 23px 0 0 23px;
+    font-size: 12px;
+    border: none;
+    height: 36px;
+  }
+
+  .btnSearch {
+    padding: 7px;
+    display: flex;
+    width: 38px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35,107,216);
+    color: white;
+    border-radius: 0 23px 23px 0;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 36px;
+  }
+
+  .box-auth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .box-login,
+  .box-register,
+  .box-logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-width: 65px;
+    height: 55px;
+    padding: 4px;
+    margin: 0;
+  }
+
+  .icon,
+  .icon-edit {
+    font-size: 30px;
+    color: #236bd8;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .text-auth {
+    color: gray !important;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    padding: 0;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2;
+    font-weight: 500;
+  }
 }
 
 .navbar-collapse {
@@ -406,6 +950,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: relative;
+  flex: 1;
 }
 
 .search-input-container {
@@ -414,7 +960,7 @@ nav {
 
   input {
     width: 100%;
-    height: 40px;
+    height: 0px;
     border: none;
     border-radius: 15px;
     padding-left: 10px;
@@ -1090,4 +1636,804 @@ nav {
       transform: scale(0.95);
     }
   }
+}
+
+/* Netbook específico (1024 x 600) - SOLUCIÓN RADICAL */
+@media (width: 1024px) and (height: 600px) {
+  .mas-dropdown-container {
+    position: relative;
+    display: inline-block;
+    z-index: 999999999999999 !important;
+  }
+
+  .mas-dropdown-menu {
+    position: fixed !important;
+    top: 80px !important;
+    left: 200px !important;
+    transform: none !important;
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 180px;
+    z-index: 999999999999999 !important;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    isolation: isolate !important;
+    pointer-events: auto !important;
+    
+    /* Fondo completamente opaco - MÚLTIPLES CAPAS */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 10px;
+      z-index: -1;
+      border: none !important;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 10px;
+      z-index: -2;
+      border: none !important;
+    }
+    
+    &.show {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      z-index: 999999999999999 !important;
+      position: fixed !important;
+      top: 80px !important;
+      left: 200px !important;
+    }
+    
+    .dropdown-header {
+      padding: 10px 15px;
+      background: #f0f8ff !important;
+      border-bottom: 2px solid #236bd8 !important;
+      font-weight: 700;
+      color: #236bd8 !important;
+      border-radius: 8px 8px 0 0;
+      font-size: 13px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 10px 15px;
+      color: #333 !important;
+      text-decoration: none;
+      border: none;
+      background: transparent !important;
+      width: 100%;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      
+      &:hover {
+        background: #e6f3ff !important;
+        color: #236bd8 !important;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      &:active, &:focus {
+        background: #d1e7ff !important;
+        color: #236bd8 !important;
+        outline: none;
+        font-weight: 600;
+      }
+      
+      mat-icon {
+        margin-right: 10px;
+        vertical-align: middle;
+        font-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    /* Forzar estado normal cuando no hay hover */
+    .mas-dropdown-menu .dropdown-item:not(:hover):not(:active):not(:focus) {
+      background: transparent !important;
+      color: #333 !important;
+      font-weight: 500;
+    }
+
+    /* Reset específico para elementos que se quedan pintados */
+    .mas-dropdown-menu .dropdown-item {
+      background: transparent !important;
+      color: #333 !important;
+    }
+
+    .mas-dropdown-menu .dropdown-item:hover {
+      background: #e6f3ff !important;
+      color: #236bd8 !important;
+      font-weight: 600;
+    }
+  }
+
+  /* Forzar z-index alto para cualquier elemento que pueda interferir */
+  body .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 80px !important;
+    left: 200px !important;
+  }
+
+  html .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 80px !important;
+    left: 200px !important;
+  }
+
+  /* Asegurar que ningún elemento interfiera */
+  *:not(.mas-dropdown-menu):not(.mas-dropdown-container) {
+    z-index: auto !important;
+  }
+}
+
+/* Netbook y pantallas similares (1024px de ancho) - SIMPLE */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .dropdown-menu {
+    position: fixed !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    z-index: 99999999 !important;
+    background: #ffffff !important;
+    border: 2px solid #236bd8 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    top: 70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    
+    /* Fondo completamente opaco - MÚLTIPLES CAPAS */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 8px;
+      z-index: -1;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 8px;
+      z-index: -2;
+    }
+    
+    li {
+      position: relative;
+      background: transparent !important;
+      z-index: 1 !important;
+    }
+
+    .dropdown-item {
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      position: relative;
+      transition: all 0.3s ease;
+      background: transparent !important;
+      font-size: 13px !important;
+      padding: 8px 18px !important;
+      white-space: nowrap !important;
+      border: none !important;
+      width: 100% !important;
+      text-align: left !important;
+      font-weight: 500 !important;
+      z-index: 1 !important;
+      display: block !important;
+
+      &:hover {
+        background: #f0f8ff !important;
+        color: #236bd8 !important;
+        -webkit-text-fill-color: #236bd8 !important;
+        font-weight: 600 !important;
+      }
+
+      &:active, &:focus {
+        background: #e6f3ff !important;
+        color: #236bd8 !important;
+        -webkit-text-fill-color: #236bd8 !important;
+        outline: none !important;
+        font-weight: 600 !important;
+      }
+
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+
+/* Netbook y pantallas similares (1024px de ancho) - CLASE ESPECÍFICA */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .mas-dropdown-container {
+    position: relative;
+    display: inline-block;
+    z-index: 9999999999;
+  }
+
+  .mas-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 5px 0 0 0;
+    min-width: 180px;
+    z-index: 9999999999;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    isolation: isolate;
+    
+    &.show {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .dropdown-header {
+      padding: 10px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      font-weight: 600;
+      color: #333;
+      border-radius: 6px 6px 0 0;
+      font-size: 13px;
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      border: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      
+      &:hover {
+        background: #f0f8ff;
+        color: #236bd8;
+        text-decoration: none;
+      }
+      
+      &:active, &:focus {
+        background: #e6f3ff;
+        color: #236bd8;
+        outline: none;
+      }
+      
+      mat-icon {
+        margin-right: 8px;
+        vertical-align: middle;
+        font-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 } 
+
+/* GARANTIZAR QUE EL DROPDOWN "MAS" SE SUPERPONGA A TODO */
+.dropdown.show .mas-dropdown-override {
+  position: fixed !important;
+  z-index: 999999999 !important;
+  pointer-events: auto !important;
+  isolation: isolate !important;
+  transform: translateX(-50%) !important;
+  top: 80px !important;
+  left: 50% !important;
+  background: #ffffff !important;
+  border: 2px solid #236bd8 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  
+  /* Asegurar que esté por encima de todo */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff !important;
+    border-radius: 8px;
+    z-index: -1;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff !important;
+    border-radius: 8px;
+    z-index: -2;
+  }
+  
+  li {
+    position: relative;
+    background: transparent !important;
+    z-index: 1 !important;
+  }
+
+  .dropdown-item {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    position: relative;
+    transition: all 0.3s ease;
+    background: transparent !important;
+    font-size: 14px !important;
+    padding: 8px 20px !important;
+    white-space: nowrap !important;
+    border: none !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-weight: 500 !important;
+    z-index: 1 !important;
+    display: block !important;
+    pointer-events: auto !important;
+
+    &:hover {
+      background: #f0f8ff !important;
+      color: #236bd8 !important;
+      -webkit-text-fill-color: #236bd8 !important;
+      font-weight: 600 !important;
+    }
+
+    &:active, &:focus {
+      background: #e6f3ff !important;
+      color: #236bd8 !important;
+      -webkit-text-fill-color: #236bd8 !important;
+      outline: none !important;
+      font-weight: 600 !important;
+    }
+
+    &::after {
+      display: none !important;
+    }
+  }
+}
+
+/* Estilos responsive para el dropdown - SOLUCIÓN RADICAL PARA MÓVILES */
+@media (max-width: 768px) {
+  .mas-dropdown-container {
+    position: relative;
+    display: inline-block;
+    z-index: 999999999999999 !important;
+  }
+
+  .mas-dropdown-menu {
+    position: fixed !important;
+    top: 120px !important;
+    left: 20px !important;
+    transform: none !important;
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 160px;
+    z-index: 999999999999999 !important;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    isolation: isolate !important;
+    pointer-events: auto !important;
+    
+    /* Fondo completamente opaco - MÚLTIPLES CAPAS */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 10px;
+      z-index: -1;
+      border: none !important;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 10px;
+      z-index: -2;
+      border: none !important;
+    }
+    
+    &.show {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      z-index: 999999999999999 !important;
+      position: fixed !important;
+      top: 120px !important;
+      left: 20px !important;
+    }
+    
+    .dropdown-header {
+      padding: 8px 12px;
+      background: #f0f8ff !important;
+      border-bottom: 2px solid #236bd8 !important;
+      font-weight: 700;
+      color: #236bd8 !important;
+      border-radius: 8px 8px 0 0;
+      font-size: 12px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 8px 12px;
+      color: #333 !important;
+      text-decoration: none;
+      border: none;
+      background: transparent !important;
+      width: 100%;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      
+      &:hover {
+        background: #e6f3ff !important;
+        color: #236bd8 !important;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      &:active, &:focus {
+        background: #d1e7ff !important;
+        color: #236bd8 !important;
+        outline: none;
+        font-weight: 600;
+      }
+      
+      mat-icon {
+        margin-right: 8px;
+        vertical-align: middle;
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    /* Forzar estado normal cuando no hay hover */
+    .mas-dropdown-menu .dropdown-item:not(:hover):not(:active):not(:focus) {
+      background: transparent !important;
+      color: #333 !important;
+      font-weight: 500;
+    }
+
+    /* Reset específico para elementos que se quedan pintados */
+    .mas-dropdown-menu .dropdown-item {
+      background: transparent !important;
+      color: #333 !important;
+    }
+
+    .mas-dropdown-menu .dropdown-item:hover {
+      background: #e6f3ff !important;
+      color: #236bd8 !important;
+      font-weight: 600;
+    }
+  }
+
+  /* Forzar z-index alto para cualquier elemento que pueda interferir */
+  body .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 120px !important;
+    left: 20px !important;
+  }
+
+  html .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 120px !important;
+    left: 20px !important;
+  }
+
+  /* Asegurar que ningún elemento interfiera */
+  *:not(.mas-dropdown-menu):not(.mas-dropdown-container) {
+    z-index: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mas-dropdown-container {
+    position: relative;
+    display: inline-block;
+    z-index: 999999999999999 !important;
+  }
+
+  .mas-dropdown-menu {
+    position: fixed !important;
+    top: 100px !important;
+    left: 15px !important;
+    transform: none !important;
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 140px;
+    z-index: 999999999999999 !important;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    isolation: isolate !important;
+    pointer-events: auto !important;
+    
+    /* Fondo completamente opaco - MÚLTIPLES CAPAS */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 8px;
+      z-index: -1;
+      border: none !important;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ffffff !important;
+      border-radius: 8px;
+      z-index: -2;
+      border: none !important;
+    }
+    
+    &.show {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      z-index: 999999999999999 !important;
+      position: fixed !important;
+      top: 100px !important;
+      left: 15px !important;
+    }
+    
+    .dropdown-header {
+      padding: 6px 10px;
+      background: #f0f8ff !important;
+      border-bottom: 2px solid #236bd8 !important;
+      font-weight: 700;
+      color: #236bd8 !important;
+      border-radius: 6px 6px 0 0;
+      font-size: 11px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .dropdown-item {
+      display: block;
+      padding: 6px 10px;
+      color: #333 !important;
+      text-decoration: none;
+      border: none;
+      background: transparent !important;
+      width: 100%;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      
+      &:hover {
+        background: #e6f3ff !important;
+        color: #236bd8 !important;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      &:active, &:focus {
+        background: #d1e7ff !important;
+        color: #236bd8 !important;
+        outline: none;
+        font-weight: 600;
+      }
+      
+      mat-icon {
+        margin-right: 6px;
+        vertical-align: middle;
+        font-size: 12px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    /* Forzar estado normal cuando no hay hover */
+    .mas-dropdown-menu .dropdown-item:not(:hover):not(:active):not(:focus) {
+      background: transparent !important;
+      color: #333 !important;
+      font-weight: 500;
+    }
+
+    /* Reset específico para elementos que se quedan pintados */
+    .mas-dropdown-menu .dropdown-item {
+      background: transparent !important;
+      color: #333 !important;
+    }
+
+    .mas-dropdown-menu .dropdown-item:hover {
+      background: #e6f3ff !important;
+      color: #236bd8 !important;
+      font-weight: 600;
+    }
+  }
+
+  /* Forzar z-index alto para cualquier elemento que pueda interferir */
+  body .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 100px !important;
+    left: 15px !important;
+  }
+
+  html .mas-dropdown-menu.show {
+    z-index: 999999999999999 !important;
+    isolation: isolate !important;
+    position: fixed !important;
+    top: 100px !important;
+    left: 15px !important;
+  }
+
+  /* Asegurar que ningún elemento interfiera */
+  *:not(.mas-dropdown-menu):not(.mas-dropdown-container) {
+    z-index: auto !important;
+  }
+} 
+
+/* FORZAR QUE EL DROPDOWN SE SUPERPONGA A TODO */
+.mas-dropdown-container {
+  position: relative;
+  display: inline-block;
+  z-index: 9999999999;
+}
+
+/* Asegurar que el dropdown se superponga sin afectar el layout */
+.mas-dropdown-menu {
+  position: absolute !important;
+  z-index: 9999999999 !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  isolation: isolate !important;
+  pointer-events: auto !important;
+}
+
+.mas-dropdown-menu.show {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 9999999999 !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  isolation: isolate !important;
+  pointer-events: auto !important;
+}
+
+/* Asegurar que el contenedor del inputSearch no interfiera */
+.inputSearch {
+  position: relative;
+  z-index: 1;
+}
+
+/* Forzar que el dropdown esté por encima de cualquier elemento */
+body .mas-dropdown-menu.show {
+  z-index: 9999999999 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  isolation: isolate !important;
+  pointer-events: auto !important;
+}
+
+/* Asegurar que ningún elemento interfiera con el dropdown */
+* {
+  z-index: auto;
+}
+
+.mas-dropdown-menu.show {
+  z-index: 9999999999 !important;
+}

@@ -340,6 +340,96 @@ app-box-lives-main {
   }
 }
 
+/* Netbook específico (1024 x 600) - ULTRA COMPACTO */
+@media (width: 1024px) and (height: 600px) {
+  .container-fluid {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 590px;
+  }
+
+  .titleSection {
+    font-size: 1.4rem;
+    margin-bottom: 1%;
+    margin-top: 2px;
+  }
+
+  .boxes-live {
+    gap: 5px;
+    padding: 0 5px;
+    max-width: 980px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  app-box-lives-main {
+    flex: 1 1 240px;
+    max-width: 260px;
+    min-width: 240px;
+  }
+
+  .buttons-links {
+    gap: 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  .btn-down,
+  .mrg-phone,
+  .btn-fashion {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+}
+
+/* Netbook y pantallas similares (1024px de ancho) - ULTRA COMPACTO */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .container-fluid {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 590px;
+  }
+
+  .titleSection {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 5px;
+  }
+
+  .boxes-live {
+    gap: 8px;
+    padding: 0 8px;
+    max-width: 980px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  app-box-lives-main {
+    flex: 1 1 250px;
+    max-width: 270px;
+    min-width: 250px;
+  }
+
+  .buttons-links {
+    gap: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .btn-down,
+  .mrg-phone,
+  .btn-fashion {
+    padding: 6px 10px;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+}
+
 /* Pantallas grandes (1200px en adelante) */
 @media (min-width: 1200px) {
   .container-fluid {
